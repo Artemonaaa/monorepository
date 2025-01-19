@@ -3,7 +3,7 @@ import { About } from "@/pages/about";
 import { Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-const routers = [
+const routes = [
   {
     path: "/",
     element: <App />,
@@ -20,6 +20,6 @@ const routers = [
   },
 ];
 
-export const router = createBrowserRouter(routers);
+export const router = createBrowserRouter(routes);
 
-export default routers;
+export default routes;
