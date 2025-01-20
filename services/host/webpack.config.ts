@@ -47,18 +47,20 @@ export default (env: EnvVariable) => {
         admin: `admin@${ADMIN_REMOTE_URL}/remoteEntry.js`,
       },
       shared: {
-        ...packageJson.dependencies,
         react: {
+          singleton: true,
           eager: true,
           requiredVersion: packageJson.dependencies["react"],
         },
-        "react-router-dom": {
-          eager: true,
-          requiredVersion: packageJson.dependencies["react-router-dom"],
-        },
         "react-dom": {
+          singleton: true,
           eager: true,
           requiredVersion: packageJson.dependencies["react-dom"],
+        },
+        "react-router-dom": {
+          singleton: true,
+          eager: true,
+          requiredVersion: packageJson.dependencies["react-router-dom"],
         },
       },
     })

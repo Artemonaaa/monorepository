@@ -5,6 +5,8 @@ import shopRoutes from "shop/Router";
 // @ts-ignore
 import adminRoutes from "admin/Router";
 
+console.log("Shop", shopRoutes);
+
 export const router = createBrowserRouter([
   {
     path: "/",

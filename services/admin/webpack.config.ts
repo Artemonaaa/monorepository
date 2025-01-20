@@ -36,21 +36,23 @@ export default (env: EnvVariable) => {
       name: "admin",
       filename: "remoteEntry.js",
       exposes: {
-        ".Router": "./src/router/Router.tsx",
+        "./Router": "./src/router/Router.tsx",
       },
       shared: {
-        ...packageJson.dependencies,
         react: {
+          singleton: true,
           eager: true,
           requiredVersion: packageJson.dependencies["react"],
         },
-        "react-router-dom": {
-          eager: true,
-          requiredVersion: packageJson.dependencies["react-router-dom"],
-        },
         "react-dom": {
+          singleton: true,
           eager: true,
           requiredVersion: packageJson.dependencies["react-dom"],
+        },
+        "react-router-dom": {
+          singleton: true,
+          eager: true,
+          requiredVersion: packageJson.dependencies["react-router-dom"],
         },
       },
     })
