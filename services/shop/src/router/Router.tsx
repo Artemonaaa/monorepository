@@ -5,14 +5,22 @@ import { createBrowserRouter } from "react-router-dom";
 
 const routes = [
   {
-    path: "/",
+    path: "/shop",
     element: <App />,
     children: [
       {
-        path: "/shop",
+        path: "/shop/main",
         element: (
           <Suspense>
             <Shop />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/shop/second",
+        element: (
+          <Suspense>
+            <div>second</div>
           </Suspense>
         ),
       },
